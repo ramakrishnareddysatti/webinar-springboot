@@ -1,0 +1,2 @@
+# webinar-springboot
+Spring Boot Project which will give an end to end application with micro services created for employee details And also has Spring data with MongoDB.This apllication also has custom health Endpoint created for monitoring the application.And also has swagger documentation  available for all the micro services available in the project.This application also has Unit testing done for few Rest API's  
