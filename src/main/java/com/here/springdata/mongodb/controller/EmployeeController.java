@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
 /**
- * Created by nakkalwa on 19/08/17.
+ * Created by Supriya Nakkalwar on 19/08/17.
  */
 @RestController
 @RequestMapping("/employees")

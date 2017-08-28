@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
+ * Created by Supriya Nakkalwar on 19/08/17
  * Custom Health Indicator class
  *for monitoring applications health
  */

@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * Created by nakkalwa on 19/08/17.
+ * Created by Supriya Nakkalwar on 19/08/17.
  */
 @Document(collection = "Employees")
 public class Employee {

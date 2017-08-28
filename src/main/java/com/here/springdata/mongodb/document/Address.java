@@ -1,7 +1,7 @@
 package com.here.springdata.mongodb.document;
 
 /**
- * Created by nakkalwa on 19/08/17.
+ * Created by Supriya Nakkalwar on 19/08/17.
  */
 public class Address {
     private String country;
