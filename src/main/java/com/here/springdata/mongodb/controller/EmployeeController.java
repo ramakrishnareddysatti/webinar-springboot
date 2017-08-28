@@ -6,9 +6,14 @@ import com.here.springdata.mongodb.repository.EmployeeRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 /**
  * Created by nakkalwa on 19/08/17.
@@ -20,7 +25,7 @@ public class EmployeeController {
 
     private EmployeeRepository employeeRepository;
 
-    @Value("${maxLimit:5}")
+    @Value("${maxLimit:4}")
     private int maxLimit;
 
     public EmployeeController(EmployeeRepository employeeRepository) {
@@ -62,7 +67,7 @@ public class EmployeeController {
         String result = "";
         if(employees.size() < maxLimit){
             Employee newEmployee = this.employeeRepository.insert(employee);
-            result = newEmployee.getId() + " is inserted successfully";
+            result = "Id:" + newEmployee.getId() + " is inserted successfully";
         }else{
             throw new RuntimeException("MaxLimit Exceeded could not insert Employee with Id:" + employee.getId());
         }
@@ -90,7 +95,8 @@ public class EmployeeController {
     @ApiOperation(value = "Delete details of an existing employee by id")
     public String deleteEmployee(@PathVariable String id){
         this.employeeRepository.delete(id);
-        return id;
+        String deleteMessage = "Id:"+ id + " got deleted successfully";
+        return deleteMessage;
     }
 
     /**

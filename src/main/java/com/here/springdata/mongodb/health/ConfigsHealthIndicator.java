@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Custom Health Indicator class
+ *for monitoring applications health
+ */
 @Component("configsHealth")
 public class ConfigsHealthIndicator implements HealthIndicator {
 
